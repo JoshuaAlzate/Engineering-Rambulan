@@ -1,0 +1,49 @@
+<div id="homeSection">
+    <div id="totalFunding" class="homeSectionItem">
+        <mat-card>
+            <mat-card-title>₱ {{model.totalFundMoney}}</mat-card-title>
+            <mat-card-subtitle>
+                <fa-icon [icon]="['fas', 'piggy-bank']"></fa-icon>
+                Available Funds
+            </mat-card-subtitle>
+        </mat-card>
+    </div>
+
+    <div id="totalPurchase" class="homeSectionItem">
+        <mat-card>
+            <mat-card-title>₱ {{model.purchaseMoney}}</mat-card-title>
+            <mat-card-subtitle>
+                <fa-icon [icon]="['fas', 'money-bill-wave']"></fa-icon>
+                Total Purchase
+            </mat-card-subtitle>
+        </mat-card>
+    </div>
+
+    <div id="banks" class="homeSectionItem">
+        <mat-card>
+            <mat-card-title>
+                <fa-icon [icon]="['fas', 'university']"></fa-icon>
+                Banks
+            </mat-card-title>
+            <mat-card-subtitle>Total Fund Amount on every bank</mat-card-subtitle>
+            <table mat-table [dataSource]="model.dataSource" id="bankList" class="mat-elevation-z8">
+                
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                
+                <ng-container matColumnDef="value">
+                    <th mat-header-cell *matHeaderCellDef> Funds </th>
+                    <td mat-cell *matCellDef="let element"> ₱ {{element.value}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="model.displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: model.displayedColumns;"></tr>
+            </table>
+        </mat-card>
+    </div>
+
+
+</div>

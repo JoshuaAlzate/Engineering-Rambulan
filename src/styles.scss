@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import "./assets/sass-utilities/variable";
+
+@mixin respond-to($keys...) {
+  $value: null;
+  @each $key in $keys {
+    $value: append($value, map-get($breakpoints, $key), "comma");
+  }
+
+  @if $value != null {
+    @media #{$value} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+.mobile-label {
+  display: none;
+}
+
+
+@include respond-to(small-only) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .removeTableHeader {
+    .mat-header-row {
+      display: none;
+    }
+  }
+
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 5px 10px;
+  }
+  mat-row {
+    min-height: 0px !important;
+  }
+  mat-cell {
+    &:first-of-type {
+      padding: unset !important;
+    }
+  }
+
+  mat-cell {
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,45 @@
+<div id="navigationBarSection">
+    <div id="logoSection">
+        <picture style="height: inherit;">
+            <source srcset="../../../assets/images/webp/banner.webp" type="image/webp">
+            <source srcset="../../../assets/images/png/banner.png" type="image/png">
+            <img alt="Engineering Rambulan" style="height: inherit;">
+        </picture>
+    </div>
+    <div id="navigationSection">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ng-container *ngTemplateOutlet="navigationLinks"></ng-container>
+            </div>
+        </nav>
+
+        <div id="webMenu">
+            <ng-container *ngTemplateOutlet="navigationLinks"></ng-container>
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #navigationLinks>
+    <ul id="menu">
+        <a routerLink="" routerLinkActive="active">
+            <li>Home</li>
+        </a>
+        <a routerLink="/funding" routerLinkActive="active">
+            <li>Funding</li>
+        </a>
+        <a routerLink="/donate" routerLinkActive="active">
+            <li>How to donate</li>
+        </a>
+        <a routerLink="/about" routerLinkActive="active">
+            <li>About</li>
+        </a>
+    </ul>
+</ng-template>

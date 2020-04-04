@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hale-structure-273102": {
+      "hosting": {
+        "Engineering-Rambulan-Website": [
+          "hale-structure-273102"
+        ]
+      }
+    }
+  }
+}

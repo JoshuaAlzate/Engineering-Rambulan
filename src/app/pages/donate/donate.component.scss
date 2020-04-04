@@ -1,0 +1,52 @@
+@import "../../../styles";
+#donateSection {
+    display: flex;
+    flex-direction: column;
+
+    .donateSectionItem {
+        flex: 1;
+        margin: 5vh 10vw;
+    }
+}
+
+#bankList {
+    width: 100%;
+}
+
+.mobile-label {
+    display: none;
+}
+
+@include respond-to(small-only) {
+    .mobile-label {
+        width: 80px;
+        display: inline-block;
+        font-weight: bold;
+        color: black;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .removeTableHeader {
+        .mat-header-row {
+            display: none;
+        }
+    }
+
+    .mat-row {
+        flex-direction: column;
+        align-items: start;
+        padding: 5px 10px;
+    }
+    mat-row {
+        min-height: 0px !important;
+    }
+    mat-cell {
+        &:first-of-type {
+            padding: unset !important;
+        }
+    }
+
+    mat-cell{
+        padding-bottom: 10px;
+    }
+}

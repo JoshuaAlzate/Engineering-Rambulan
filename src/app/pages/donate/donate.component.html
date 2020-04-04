@@ -1,0 +1,46 @@
+<div id="donateSection">
+    <div class="donateSectionItem">
+        <mat-card>
+            <div id="banks">
+                <mat-card>
+                    <mat-card-title>
+                        <fa-icon [icon]="['fas', 'university']"></fa-icon>
+                        Banks
+                    </mat-card-title>
+                    <mat-card-subtitle>Bank Information</mat-card-subtitle>
+                    <table mat-table [dataSource]="dataSource" id="bankList" class="mat-elevation-z8 removeTableHeader">
+
+                        <ng-container matColumnDef="bankName">
+                            <mat-header-cell *matHeaderCellDef> Bank Name </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <span class="mobile-label">Bank Name:</span>
+                                {{element.bankName}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="recipient">
+                            <mat-header-cell *matHeaderCellDef> Recipient </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <span class="mobile-label">Recipient:</span>
+                                {{element.recipient}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="accountNumber">
+                            <mat-header-cell *matHeaderCellDef> Account Number </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <span class="mobile-label">Account:</span>
+                                {{element.accountNumber}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row >
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </table>
+                </mat-card>
+
+            </div>
+        </mat-card>
+    </div>
+
+</div>

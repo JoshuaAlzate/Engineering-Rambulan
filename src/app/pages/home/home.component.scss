@@ -1,0 +1,30 @@
+#homeSection {
+    display: flex;
+    flex-direction: column;
+
+    .homeSectionItem {
+        flex: 1;
+        margin: 5vh 10vw;
+    }
+
+    #totalFunding {
+        mat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    #totalPurchase {
+        margin-top: unset;
+        mat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+#bankList {
+    width: 100%;
+}

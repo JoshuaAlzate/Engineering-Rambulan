@@ -1,0 +1,143 @@
+<div id="fundingSection">
+    <mat-card>
+        <mat-card-title>
+            <fa-icon [icon]="['fas', 'university']"></fa-icon>
+            Banks Breakdown
+        </mat-card-title>
+
+        <mat-card-subtitle>
+            GCash
+        </mat-card-subtitle>
+        <table mat-table [dataSource]="model.gcashDataSource" class="mat-elevation-z8 removeTableHeader">
+
+            <ng-container matColumnDef="Value">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Amount:</span>
+                    {{element.Value}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="InsertDate">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Date:</span>
+                    {{element.InsertDate}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="model.bankColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: model.bankColumns;"></mat-row>
+        </table>
+        <mat-paginator #gcashPaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+        <mat-card-subtitle>
+            BPI
+        </mat-card-subtitle>
+        <table mat-table [dataSource]="model.bpiDataSource" class="mat-elevation-z8 removeTableHeader">
+
+            <ng-container matColumnDef="Value">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Amount:</span>
+                    {{element.Value}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="InsertDate">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Date:</span>
+                    {{element.InsertDate}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="model.bankColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: model.bankColumns;"></mat-row>
+        </table>
+        <mat-paginator #bpiPaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+        <mat-card-subtitle>
+            BDO
+        </mat-card-subtitle>
+        <table mat-table [dataSource]="model.bdoDataSource" class="mat-elevation-z8 removeTableHeader">
+
+            <ng-container matColumnDef="Value">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Amount:</span>
+                    {{element.Value}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="InsertDate">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Date:</span>
+                    {{element.InsertDate}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="model.bankColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: model.bankColumns;"></mat-row>
+        </table>
+        <mat-paginator #bdoPaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+        <mat-card-subtitle>
+            Metrobank
+        </mat-card-subtitle>
+        <table mat-table [dataSource]="model.metrobankDataSource" class="mat-elevation-z8 removeTableHeader">
+
+            <ng-container matColumnDef="Value">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Amount:</span>
+                    {{element.Value}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="InsertDate">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Date:</span>
+                    {{element.InsertDate}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="model.bankColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: model.bankColumns;"></mat-row>
+        </table>
+        <mat-paginator #metrobankPaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+        <mat-card-title>
+            <fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>
+            Purchase Breakdown
+        </mat-card-title>
+        <table mat-table [dataSource]="model.purchaseDataSource" class="mat-elevation-z8 removeTableHeader">
+
+            <ng-container matColumnDef="Description">
+                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Description:</span>
+                    {{element.Description}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Value">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Amount:</span>
+                    {{element.Value}}
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="InsertDate">
+                <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <span class="mobile-label">Date:</span>
+                    {{element.InsertDate}}
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="model.purchaseColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: model.purchaseColumns;"></mat-row>
+        </table>
+        <mat-paginator #purchasePaginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+    </mat-card>
+</div>

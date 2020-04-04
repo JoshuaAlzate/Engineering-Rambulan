@@ -1,0 +1,24 @@
+@import './function';
+
+// Defining values
+$small-range:   (0em, 40em);        // 0, 640px 
+$medium-range:  (40.063em, 64em);   // 641px, 1024px 
+$large-range:   (64.063em, 90em);   // 1025px, 1440px 
+$xlarge-range:  (90.063em, 120em);  // 1441px, 1920px 
+$xxlarge-range: (120.063em);        // 1921px 
+
+$screen:       "only screen" !default;
+$landscape:    "#{$screen} and (orientation: landscape)" !default;
+$portrait:     "#{$screen} and (orientation: portrait)" !default;
+$small-up:     $screen !default;
+$small-only:   "#{$screen} and (max-width: #{lastElement($small-range)})" !default;
+$medium-up:    "#{$screen} and (min-width:#{firstElement($medium-range)})" !default;
+$medium-only:  "#{$screen} and (min-width:#{firstElement($medium-range)}) and (max-width:#{lastElement($medium-range)})" !default;
+$large-up:     "#{$screen} and (min-width:#{firstElement($large-range)})" !default;
+$large-only:   "#{$screen} and (min-width:#{firstElement($large-range)}) and (max-width:#{lastElement($large-range)})" !default;
+$xlarge-up:    "#{$screen} and (min-width:#{firstElement($xlarge-range)})" !default;
+$xlarge-only:  "#{$screen} and (min-width:#{firstElement($xlarge-range)}) and (max-width:#{lastElement($xlarge-range)})" !default;
+$xxlarge-up:   "#{$screen} and (min-width:#{firstElement($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{firstElement($xxlarge-range)}))" !default;
+
+$breakpoints: (small-up: $small-up, small-only: $small-only, "medium-up": $medium-up, medium-only: $medium-only, large-up: $large-up, large-only: $large-only, xlarge-up: $xlarge-up, xlarge-only: $xlarge-only, xxlarge-up: $xxlarge-up, xxlarge-only: $xxlarge-only);

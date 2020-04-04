@@ -1,0 +1,23 @@
+#fundingSection {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .fundingSectionItem {
+        flex: 1;
+        margin: 5vh 10vw;
+    }
+
+    mat-card {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        margin: 5vh 10vw;
+    }
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}

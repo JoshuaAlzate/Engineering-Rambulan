@@ -1,0 +1,29 @@
+@import "../../../styles";
+#aboutSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#logoSection {
+    height: 40vh;
+}
+
+mat-card {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@include respond-to(medium-only) {
+    #logoSection {
+        height: 30vh;
+    }
+}
+
+@include respond-to(small-only) {
+    #logoSection {
+        height: 17vh;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Engineering-Rambulan-Website",
+      "public": "dist/Engineering-Rambulan-Website",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
